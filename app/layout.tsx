@@ -20,7 +20,7 @@ export default function RootLayout({
   const links: NavbarProps["links"] = [
     {
       label: "Features",
-      href: "/features",
+      href: "#features",
     },
     {
       label: "Pricing",

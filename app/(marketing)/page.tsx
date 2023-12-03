@@ -67,7 +67,7 @@ export default function Home() {
           </Button>
         </div>
       </main>
-      <section className="container flex flex-col justify-center items-center mt-64">
+      <section id="features" className="container flex flex-col justify-center items-center pt-64">
         <h1 className="font-heading font-bold text-6xl">
           Unlocking Power with AI
         </h1>
@@ -89,7 +89,7 @@ export default function Home() {
           community-driven plugins marketplace.
         </p>
       </section>
-      <section className="flex flex-col container justify-center items-center mt-44">
+      <section id="open-source" className="flex flex-col container justify-center items-center mt-44">
         <h1 className="font-heading font-bold text-6xl">We are open-source</h1>
         <p className="text-muted-foreground text-center">
           We love the community of open source. We are always looking for new
