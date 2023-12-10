@@ -33,9 +33,11 @@ export const Navbar = ({ links }: NavbarProps) => {
           </ul>
         </nav>
       </div>
-      <Link href="/login" className={buttonVariants({ variant: "secondary" })}>
-        Login
-      </Link>
+      <div>
+        <Link href="/login" className={buttonVariants({ variant: "secondary" })}>
+          Login
+        </Link>
+      </div>
     </header>
   );
 };

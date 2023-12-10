@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Label } from "@radix-ui/react-label";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -15,14 +15,14 @@ export default function Page() {
 
   useEffect(() => {
     setError(null);
-  }, []);
+  }, [])
 
   async function sleep(ms: number) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    e.preventDefault()
     setLoading(true);
     const formData = new FormData(e.currentTarget);
     const email = (formData.get("email") as string) ?? ("" as string);
@@ -35,7 +35,7 @@ export default function Page() {
     } else {
       sleep(5000);
       setLoading(false);
-      router.refresh();
+      router.refresh()
     }
   };
 
@@ -46,7 +46,7 @@ export default function Page() {
           Welcome back!
         </h1>
         <p className="text-center text-muted-foreground">
-          Login to your account
+          Sign up to your account
         </p>
         <Label htmlFor="email">Email</Label>
         <Input
@@ -60,9 +60,9 @@ export default function Page() {
         </Button>
         {error && <p className="text-red-500 text-center ">{error}</p>}
         <p className="text-center text-muted-foreground">
-          You don&apos;t have an account yet?{" "}
+          You have an account?{" "}
           <Link href="/login" className="text-primary hover:underline">
-            Create your account
+            Login
           </Link>
         </p>
       </form>
